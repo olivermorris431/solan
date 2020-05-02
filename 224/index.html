@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="width=device-width, height=device-height, initial-scale=1.0" name="viewport" />
+    <meta charset="utf-8" />
+    <title>Choco Lite</title>
+    <style>
+        body,input[type=text],select{font-family:Roboto,arial,sans-serif;font-size:15px}#sostav .item,#steps .item{float:left;text-align:center}#compare .wr .text1,#compare .wr .text2 li,#compare h2,#doctor .info,#doctor .text,#header .block,#result .item,#reviews .review,#reviews h2,#sostav .item,#sostav .plaha,#sostav h2,#steps .item,#steps .text,.button,.title{text-align:center}#bottom a:hover,a{text-decoration:none}*{margin:0;padding:0;border:0;outline:0}li{list-style:none}body{color:#6d6c6c;overflow-x:hidden}input[type=text],select{background:url(img/input.png);display:block;width:268px;height:50px;line-height:50px;padding:0 20px;color:#fff;margin:0 auto 13px}#header .block .sale,#header .block h1,#sostav .item .message div,.button,.title{font-family:Lobster,arial,sans-serif}#footer input::-webkit-input-placeholder{color:#fff}#footer input::-moz-placeholder{color:#fff}select{width:309px;padding:0 0 0 20px}select option{color:#000}.width{width:990px;margin:0 auto;position:relative}.clear{clear:both;display:block}.button{background:0 0;border:3px solid #fff;width:262px;height:56px;line-height:56px;display:block;font-size:25px;color:#fff;cursor:pointer;margin:0 auto}.button:not(:disabled):hover{background:#fff;color:#2e150f}.title{color:#2e150f;font-size:40px;line-height:45px}h1,h2,h3,h4{font-weight:400;font-size:100%}.hide-it{max-width:1920px;min-width:300px;margin:auto}#header{background:url(img/top.jpg) center 0 no-repeat;height:739px;color:#fff;width:100%}#header .block{width:550px}#header .block h1{padding:84px 0 0;font-size:85px;line-height:1}#header .block h2{font-size:24px;font-weight:500;padding:15px 0 0}#header .block .list{line-height:30px;padding:45px 0 0;font-size:20px}#header .block .sale{font-size:30px;color:#f2eb2e;line-height:1;padding:73px 0 0}#header .block .action{padding:15px 0 0;color:#f2eb2e;font-weight:500}#header .price{padding:35px 0 47px}#header .price del,#header .price div{font-size:40px;display:inline-block;line-height:1;padding:0 15px;vertical-align:middle}#result .item img,#steps .item img,#steps .item span{vertical-align:bottom}#header .price del{font-size:20px;color:#c7c0be}#steps{width:100%}#steps .title{padding:80px 0 40px}#steps .item{width:33%}#steps .item div{height:74px}#steps .item span{height:74px;display:inline-block}#steps .item p{font-weight:500;padding:25px 0 0}#steps .text{padding:0 0 100px}#steps .text .title{font-size:25px;line-height:1;padding:96px 0 33px}#steps .text p{line-height:25px}#sostav{background:url(img/sostav.jpg) center 0 no-repeat;width:100%}#sostav .title{padding:70px 0 0}#sostav h2{padding:20px 0 0;font-weight:500;color:#2e150f}#sostav .item{width:308px;padding:0 0 80px;position:relative}#sostav .item.first{margin:-30px 0 0}#sostav .item.right{float:right}#sostav .item img{margin:0 0 -18px;position:relative;z-index:2}#sostav .item .message{background:#fff;font-size:14px;border-radius:15px;-moz-border-radius:15px;padding:0 10px 30px}#sostav .item .message div{padding:33px 0 15px;font-size:23px;line-height:1;color:#2e150f}#compare .wr .text1,#compare .wr .text2,#compare .wr .text3 span,#sostav .plaha{font-family:Lobster,cursive}#sostav .item.third{padding-bottom:20px}#sostav .item .message p{line-height:23px}#sostav .plaha{position:absolute;width:200px;bottom:85px;left:50%;margin-left:-100px;color:#205a22;font-size:20px;text-shadow:1px 1px 2px rgba(255,255,255,.5);-webkit-background-clip:text;-moz-background-clip:text;background-clip:text}#result{padding:75px 0 90px;width:100%}#result h2{padding:20px 0 65px;color:#2e150f;font-weight:500;text-align:center}#result .item{width:20%;float:left}#result .item p{padding:25px 0 0}#info-block{background:url(img/info-block.jpg) center 0 no-repeat;min-height:585px;width:100%}#info-block p{line-height:25px;padding:60px 425px 0 0}#compare{background:url(img/compare.jpg) center bottom no-repeat;height:632px;width:100%}#compare .title{color:#fff;padding:20px 0 0}#compare h2{color:#2e150f;padding:22px 0 0;font-weight:500}#compare .wr{position:relative;width:445px;top:60px;left:52%}#compare .wr .text1{padding-top:15px;font-size:30px;margin:0 0 205px;color:#5b5a56}#compare .wr .text1 span{color:#ff0108;font-size:18px;display:block}#compare .wr .text2{padding:0;margin:0 0 38px;font-size:0}#compare .wr .text2 li{list-style-type:none;margin:0;padding:0;width:90px;display:inline-block;color:#5b5a56;font-size:13px}#compare .wr .text2 li:first-child{width:35px;margin-right:45px}#compare .wr .text3{font-size:0}#compare .wr .text3 span{width:50%;padding-left:50px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;font-size:13px;color:#5b5a56;display:inline-block;line-height:1.5;vertical-align:middle}#doctor .info span,#footer .left .sale,#footer .left h1,#reviews .review .name{font-family:Lobster,arial,sans-serif}#doctor .info img,#reviews .review img{vertical-align:bottom}#compare .wr .text3 span:last-child{padding-left:35px}#doctor .title{padding:72px 0 68px}#doctor p{line-height:25px;width:565px;font-weight:300}#doctor .info{float:right}#doctor .info span{display:block;font-size:21px;line-height:25px;padding:24px 0 0}#doctor .text{font-weight:300;padding:0 0 95px}#doctor .text .title{padding:40px 0 20px;font-size:25px;line-height:1}#reviews{background:url(img/reviews.jpg) center 0 no-repeat;padding-bottom:55px}#reviews .title{color:#fff;padding:70px 0 0}#reviews h2{color:#fff;font-weight:300;padding:20px 0 50px}#reviews .review{background:#fff;height:565px;border-radius:15px;-moz-border-radius:15px;padding:24px;width:254px;float:left}#reviews .review.center{margin:0 42px}#info-block2 .title div,#info-block2 .title span{display:inline-block;vertical-align:middle}#reviews .review .date{overflow:hidden}#reviews .review .date div{padding:15px 0 25px;width:50%;float:left}#reviews .review .name{font-size:23px;color:#2e150f;line-height:1}#reviews .review .email{color:#2e150f;padding:17px 0 35px}#reviews .review p{line-height:1.435;font-weight:300;text-align:left}#reviews .buy div{padding:50px 0 30px;font-size:18px;color:#fff;text-align:center}#info-block2{padding:40px 0 0}#info-block2 .title{font-size:25px;line-height:30px;text-align:left;padding-bottom:20px}#bottom,#footer .left,#footer .prices,#footer .time,#how-buy .item{text-align:center}#info-block2 .title.second{text-align:center;padding:30px 0 0}#info-block2 .title span{height:139px}#info-block2 .left,#info-block2 .right{width:45%;vertical-align:top;display:inline-block}#info-block2 .left{padding-right:5%;padding-bottom:30px}#info-block2 .center{width:290px;margin:0 0 0 325px}#info-block2 p{line-height:25px;font-weight:300}#how-buy{padding:95px 0;width:100%}#how-buy .title{padding:0 0 60px}#how-buy .item{width:33%;float:left}#how-buy .item img{vertical-align:bottom}#how-buy .item p{font-weight:500;line-height:25px;padding:25px 30px 0}#footer{background:url(img/footer.jpg) center 0 no-repeat;height:686px;width:100%}#footer .left{color:#fff;width:550px;float:left}#footer .left h1{padding:84px 0 0;font-size:85px;line-height:1}#footer .left h2{font-size:24px;font-weight:500;padding:15px 0 0}#footer .left .sale{font-size:30px;color:#f2eb2e;line-height:1;padding:243px 0 0}#footer .left .action{padding:15px 0 0;color:#f2eb2e;font-weight:500}#footer .price{padding:35px 0 47px}#footer .price del,#footer .price div{font-size:40px;display:inline-block;line-height:1;padding:0 15px;vertical-align:middle}#footer .price del{font-size:20px;color:#c7c0be}#footer .time{color:#f2eb2e;padding:120px 0 75px}#footer .time .name-t{font-family:Lobster,cursive;font-size:28px;font-weight:500;padding:0 0 25px}#footer #timer *{display:inline-block;vertical-align:middle;font-size:50px;line-height:1;font-family:Lobster,arial,sans-serif}#footer #timer div{width:63px}#footer #timer .dots{padding:0 5px}#footer .right{float:right}#footer .button{width:307px;height:63px}#footer .prices{color:#fff;font-size:20px;line-height:1.5;margin-bottom:20px}#bottom{background:#141414;font-family:arial,sans-serif;font-size:13px;color:#ccc;padding:30px 0}#bottom a{color:#ccc;text-decoration:underline}#howuse .hu_step .hu_title,#howuse h2{color:#2e150f;font-family:Lobster,arial,sans-serif;text-align:center}#howuse{width:100%}#howuse h2{font-size:40px;line-height:45px;margin-bottom:40px}#howuse .hu_step{float:left;width:33%;min-width:280px;margin-bottom:40px}#howuse .hu_step img{width:280px;display:block;margin:0 auto 20px;border:1px dashed rgba(125,255,125,.7)}#howuse .hu_step .hu_title{font-size:30px}#howuse .hu_step p{width:280px;margin:20px auto 0}@media screen and (max-width:889px){#howuse .hu_step{width:50%}#howuse .hu_step:last-of-type{float:none;clear:both;margin-left:auto;margin-right:auto}}@media screen and (max-width:579px){#howuse .hu_step,#howuse .hu_step:last-of-type{float:none;margin-left:auto;margin-right:auto}#howuse .hu_step{width:280px}}@media screen and (max-width:989px) and (min-width:640px){#sostav .item,#sostav .item.first{margin:0 auto}#how-buy,#result,#result .item,#result h2,#reviews h2,#sostav .item,#steps .text{text-align:center}#how-buy .item,#result .item{vertical-align:top;float:none}#doctor .info,#footer .left,#footer .right,#how-buy .item,#result .item,#reviews .review,#sostav .item,#sostav .item.right{float:none}.width{width:574px;padding:0 33px}#header{background:url(img/640/top.jpg) center 0 no-repeat;height:1005px}#header .block{width:auto}#header .block h1{padding:75px 0 0}#header .block h2{padding:10px 0 0}#header .block .list{padding:40px 0 0}#steps .title{padding:55px 0 40px}#steps .text{padding:0 0 80px}#steps .text .title{font-size:25px;line-height:1;padding:70px 0 33px}#steps .text br{display:none}#sostav{background:url(img/640/sostav.jpg) center 0 no-repeat;height:2455px}#sostav .title{padding:60px 0 0}#sostav h2{padding:20px 0 35px}#sostav .item{width:308px;padding:0 0 35px;position:relative}#reviews .review,#reviews .review.center{margin:0 auto 35px}#sostav .plaha{bottom:-316px}.title{font-size:34px;line-height:33px}#compare .wr .text1{padding-top:43px}#result{padding:45px 0 10px}#result h2{padding:15px 0 50px;color:#2e150f;font-weight:500}#result .item{width:49%;display:inline-block;padding:0 0 50px}#info-block{background:url(img/640/info-block.jpg) center bottom no-repeat;min-height:1px}#info-block p{line-height:25px;padding:60px 25px 425px}#compare{background:url(img/640/compare.jpg) center bottom no-repeat;height:641px}#compare .title br{display:none}#compare .wr{top:50px;left:19.5%}#doctor .title{padding:50px 0 30px}#doctor p{width:auto;padding:50px 20px 0}#doctor .text{padding:0 0 65px}#reviews{background:url(img/640/reviews.jpg) center 0 no-repeat}#reviews .title{color:#fff;padding:30px 30px 0}#reviews h2{color:#fff;font-weight:300;padding:20px 0 30px}#reviews .review{padding:24px;height:auto}#reviews .buy div{padding:15px 0 25px}#info-block2{padding:40px 0 0}#info-block2 .title{padding:20px 0;height:auto}#info-block2 .title.second{text-align:center;padding:20px 0}#info-block2 .title span{display:inline;height:0}#info-block2 .title br{display:none}#info-block2 .title div{display:block}#info-block2 .left,#info-block2 .right{float:none;width:auto;padding:0 30px}#info-block2 .center{width:auto;margin:0;padding:0 30px}#how-buy{padding:55px 0 40px}#how-buy .title{padding:0 0 50px}#how-buy .item{width:49%;display:inline-block;padding:0 0 25px}#how-buy .item p{font-weight:500;line-height:25px;padding:25px 0 0}#footer{background:url(img/640/footer.jpg) center 0 no-repeat;height:1158px}#footer.page2{height:900px}#footer .left{width:auto}#footer .left h1{padding:65px 0 0}#footer .price{padding:35px 0 0}#footer .time{padding:55px 0 75px}#footer .button{width:307px;height:63px;margin:20px auto 0}}@media screen and (max-width:640px){#sostav .item,#sostav .item.first{margin:0 auto}#compare .title br,#info-block .title br,#steps .text br{display:none}#doctor .info img,#how-buy .item img,#result .item img{vertical-align:bottom}.width{width:284px;padding:0 18px}.title{font-size:25px;line-height:30px}input[type=text],select{width:244px}select{width:284px}#header .block,#steps .item{width:auto;text-align:center}#header{background:url(img/320/top.jpg) center 0 no-repeat;height:965px}#header .block h1{padding:60px 0 0;font-size:45px}#header .block h2{font-size:15px;padding:10px 0 0}#header .block .list{font-size:15px}#header .block .sale{padding-top:48px}#steps .title{padding:40px 0}#steps .item{float:none;padding:0 80px 40px}#steps .item p{padding:25px 0 0}#steps .text{padding:0 0 50px}#steps .text .title{font-size:25px;line-height:1;padding:60px 0 33px}#sostav{background:url(img/320/sostav.jpg) center 0 no-repeat;height:2372px}#sostav .width{width:300px;padding:0}#sostav .title{padding:83px 0 0}#sostav h2{padding:12px 0 25px}#sostav .item{text-align:center;width:300px;float:none;padding:0 0 30px;position:relative}#sostav .item.right{float:none}#sostav .plaha{bottom:-300px}#result{padding:40px 0 25px}#result h2{padding:15px 0 40px}#result .item{width:auto;float:none;padding:0 0 35px}#result .item p{padding:25px 0 0}#info-block{background:url(img/640/info-block.jpg) center bottom no-repeat;min-height:1px}#info-block p{line-height:25px;padding:50px 0 400px}#compare{background:url(img/320/compare.jpg) center 0 no-repeat;height:535px}#compare h2{font-size:13px;padding:15px 0 0}#compare .wr{width:284px;top:48px;left:0}#compare .wr .text1{padding-top:25px;font-size:20px;margin:0 0 145px}#compare .wr .text1 span{font-size:16px}#compare .wr .text2{margin:0 0 25px}#compare .wr .text2 li{width:65px;font-size:10px}#compare .wr .text2 li:first-child{width:35px;margin-right:28px;margin-left:-15px}#compare .wr .text2 li:last-child{width:59px;margin-right:-20px}#reviews .review,#reviews .review.center{margin:0 auto 20px}#compare .wr .text3 span{font-size:10px;padding-left:30px}#doctor .title{padding:45px 0 35px}#doctor p{width:auto;padding:50px 0 0}#doctor .info{float:none;text-align:center}#doctor .info img{width:260px}#doctor .info span{display:block;font-size:21px;line-height:25px;font-family:Lobster,arial,sans-serif;padding:24px 0 0}#doctor .text{text-align:center;font-weight:300;padding:0 0 65px}#doctor .text .title{padding:40px 0 20px;font-size:25px;line-height:1}#reviews{background:url(img/320/reviews.jpg) center 0 no-repeat}#reviews .width{padding:0;width:300px}#reviews .title{padding:30px 0 0}#reviews h2{color:#fff;font-weight:300;text-align:center;padding:20px 0 30px}#sostav .item .message{padding:0 10px 17px}#reviews .review{padding:24px 24px 30px;height:auto;width:240px;float:none}#reviews .buy div{padding:30px 0;font-size:15px}#info-block2{padding:40px 0 0}#info-block2 .title{padding:20px 0;height:auto}#info-block2 .title.second{text-align:center;padding:20px 0}#info-block2 .title span{display:inline;height:0}#info-block2 .title br{display:none}#info-block2 .title div{display:block}#info-block2 .left,#info-block2 .right{float:none;width:auto;padding:0}#info-block2 .center{width:auto;margin:0;padding:0}#how-buy{padding:30px 0}#how-buy .title{padding:0 30px 50px}#how-buy .item{width:auto;float:none;padding:0 0 40px}#how-buy .item p{font-weight:500;line-height:25px;padding:25px 0 0}#footer{background:url(img/320/footer.jpg) center 0 no-repeat;height:1042px}#footer.page2{height:800px}#footer .left{width:auto;float:none}#footer .left h1{padding:48px 0 0;font-size:40px}#footer .left h2{font-size:15px;padding:15px 0 0}#footer .left .sale{padding:243px 0 0}#footer .left .action{padding:15px 0 0}#footer .price{padding:35px 0}#footer .time{padding:20px 0 45px}#footer .right{float:auto}#footer .button{width:284px;height:63px}}.form_annotation{font-size:10px;color:#fff;display:block;text-align:center;margin:10px auto}
+    </style>
+    <!-- Event snippet for copa conversion page -->
+<script>
+  gtag('event', 'conversion', {
+      'send_to': 'AW-798471887/hf0ZCMbN6M4BEM_t3vwC',
+      'transaction_id': ''
+  });
+</script>
+
+</head>
+
+<body>
+    <div class="hide-it">
+        <!-- <header> -->
+        <div id="header">
+            <div class="width">
+                <div class="block">
+                    <h1>Choco Lite</h1>
+                    <h2>Натурален комплекс за отслабване</h2>
+                    <div class="list">
+                        Бързо намалява излишното тегло <br/> Бори се с целулита <br/> Премахва пъпките и акнето
+                    </div>
+                    <div class="hidden_upsale" style="visibility: visible">
+                        <div class="sale">Гореща оферта! 50% отстъпка!</div>
+                    </div>
+                    <div class="price">
+                        <del class="al-cost-promo">138 Лева</del>
+                        <div class="al-cost">69 Лева</div>
+                        
+                    </div>
+                    <a class="button" href="#footer">Поръчай</a>
+                </div>
+            </div>
+        </div>
+        <!-- </header> -->
+        <!-- <steps> -->
+        <div id="steps">
+            <div class="width">
+                <div class="title">Как да свалите 10 кг?</div>
+                <div class="item">
+                    <div>
+                        <span></span>
+                        <img alt="" src="img/ico1.jpg" />
+                    </div>
+                    <p>2-4 седмичен курс</p>
+                </div>
+                <div class="item">
+                    <div>
+                        <span></span>
+                        <img alt="" src="img/ico2.jpg" />
+                    </div>
+                    <p>Пийте сутрин</p>
+                </div>
+                <div class="item">
+                    <div>
+                        <span></span>
+                        <img alt="" src="img/ico3.jpg" />
+                    </div>
+                    <p>Пригответе в чаша</p>
+                </div>
+                <div class="clear"></div>
+                <div class="text">
+                    <div class="title">Коктейлът Choco Lite</div>
+                    <p>е комплекс от натурални съставки за отслабване, които взаимно подсилват действието си.</p>
+                    <p>Резултатите надминават всички очаквания!</p>
+                </div>
+            </div>
+        </div>
+        <!-- </steps> -->
+        <!-- <sostav> -->
+        <div id="sostav">
+            <div class="width">
+                <div class="title">Защо Choco Lite <br/>е изключително ефективен?</div>
+                <h2>6 естествени съставки</h2>
+                <div class="item first">
+                    <img alt="" src="img/img1.png" />
+                    <div class="message">
+                        <div> Какао:</div>
+                        <p>Натуралното какао ускорява липолизата и забавя процеса на стареене
+                        </p>
+                    </div>
+                </div>
+                <div class="item first right">
+                    <img alt="" src="img/img2.png" />
+                    <div class="message">
+                        <div> Трици:</div>
+                        <p> Удължават чувството за ситост, намаляват усвояването на калории.
+                        </p>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="item second">
+                    <img alt="" src="img/img3.png" />
+                    <div class="message">
+                        <div> Елда:</div>
+                        <p>Спомага за отделянето на излишните течности от организма.</p>
+                    </div>
+                </div>
+                <div class="item second right">
+                    <img alt="" src="img/img4.png" />
+                    <div class="message">
+                        <div> Спирулина:</div>
+                        <p>Дава ненадминат ефект за отслабване, предотвратява затлъстяването.
+                        </p>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="item third">
+                    <img alt="" src="img/img5.png" />
+                    <div class="message">
+                        <div>Грах:</div>
+                        <p>Нормализира метаболизма на мазнините. Ускорява метаболизма.
+                        </p>
+                    </div>
+                </div>
+                <div class="item third right">
+                    <img alt="" src="img/img6.png" />
+                    <div class="message">
+                        <div>Кафяв ориз:</div>
+                        <p>Стимулира ефективната загуба на тегло, тъй като включва намаляване на количеството на консумираните калории на ден.
+                        </p>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="plaha">Органичен.</div>
+            </div>
+        </div>
+        <!-- </sostav> -->
+        <!-- <result> -->
+        <div id="result">
+            <div class="width">
+                <div class="title">Резултат: с Choco Lite всеки отслабва!</div>
+                <h2>Повече от 7000 щастливи жени, които отслабнаха! </h2>
+                <div class="item">
+                    <img alt="" src="img/img7.jpg" />
+                    <p>Мазнините изчезват пред очите ви</p>
+                </div>
+                <div class="item">
+                    <img alt="" src="img/img8.jpg" />
+                    <p>Нямате желание да ядете</p>
+                </div>
+                <div class="item">
+                    <img alt="" src="img/img9.jpg" />
+                    <p>Пълни сте с енергия</p>
+                </div>
+                <div class="item">
+                    <img alt="" src="img/img10.jpg" />
+                    <p>Без повече жажда за захар</p>
+                </div>
+                <div class="item">
+                    <img alt="" src="img/img11.jpg" />
+                    <p>Добро настроение</p>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <!-- </result> -->
+        <!-- <info-block> -->
+        <div id="info-block">
+            <div class="width">
+                <div class="title">Отслабването никога не е било
+                    <br/> толкова лесно!</div>
+                <p>
+                    С комплекса Choco Lite може да свалите до 10 кг за 4 седмици. Докато отслабвате ще сте в добро настроение и пълни с енергия! Наслаждавайте се на своето отслабване! Choco Lite е уникален продукт, който ще искате пак и пак.
+                    <br/>
+                    <br/> Продуктът е диетична добавка, съдържа само естествени съставки. Основните съставки са натурално какао, трици, елда, спилурина водорасло, грах и кафяв ориз. Продуктът е подходящ за всекидневна употреба и няма противопоказания.
+                    Той премахва първопричината за натрупването на излишно тегло, като нормализира метаболитните процеси в тялото.
+                    <br/>
+                    <br/>Това е продукт, който направи истинска революция в сферата на отслабването, здравето и подмладяването.
+                </p>
+            </div>
+        </div>
+        <!-- </info-block> -->
+        <!-- <compare> -->
+        <div id="compare">
+            <div class="width">
+                <div class="title">Сравняване на Choco Lite с обикновени
+                    <br/> методи на отслабване
+                </div>
+                <h2>Интервюирахме група от 15 жени, които искаха да отслабнат, а резултатите говорят сами: </h2>
+                <div class="wr">
+                    <div class="text1">Choco Lite <span>(Не промени техния начин на живот)</span></div>
+                    <ul class="text2 clearfix">
+                        <li>кг</li>
+                        <li>
+                            1 седмица
+                        </li>
+                        <li>
+                            2 седмици
+                        </li>
+                        <li>
+                            3 седмици
+                        </li>
+                        <li>
+                            4 седмици
+                        </li>
+                    </ul>
+                    <div class="text3">
+                        <span>Физически упражнения 3 пъти в седмицата  </span>
+                        <span>Медикаменти за отслабване  </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- </compare> -->
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/dtime.min.js"></script>
+        <!-- <reviews> -->
+        <div id="reviews">
+            <div class="width">
+                <div class="title">Попитайте тези, които вече са свалили килограми с Choco Lite</div>
+                <h2>Истински хора – истински резултати! </h2>
+                <div class="review">
+                    <img alt="" src="img/ava1.jpg" />
+                    <div class="date">
+                        <div>
+                            <script>
+                                dtime_nums(-60, true)
+                            </script>
+                        </div>
+                        <div>
+                            <script>
+                                dtime_nums(-10, true)
+                            </script>
+                        </div>
+                    </div>
+                    <div class="name">Ангелина Димитрова, 25 г.</div>
+                    <div class="email"> angelina*****@abv.bg
+                    </div>
+                    <p>
+                        Това е нещо невероятно! Свалих почти 18 кг първите шест седмици и 7 кг за следващите две седмици! Основното нещо е да следвате инструкциите: чаша от напитката преди лека закуска или вместо нея, всеки ден без прекъсване. Разбира се, не трябва да ядете
+                        сладкиши преди лягане. След като аз го направих, и вие можете!
+                    </p>
+                </div>
+                <div class="review center">
+                    <img alt="" src="img/ava2.jpg" />
+                    <div class="date">
+                        <div>
+                            <script>
+                                dtime_nums(-70, true)
+                            </script>
+                        </div>
+                        <div>
+                            <script>
+                                dtime_nums(-4, true)
+                            </script>
+                        </div>
+                    </div>
+                    <div class="name"> Божидар Манолов, 44 г.
+                    </div>
+                    <div class="email"> kutuz*****@abv.bg
+                    </div>
+                    <p>
+                        Жена ми ми купи Choco Lite, след като опитах много други неща: от различни видове чай до хапчета за отслабване. Само за месец и половина се отървах от 12 кг и не възнамерявам да спирам дотук. Благодаря!
+                    </p>
+                </div>
+                <div class="review">
+                    <img alt="" src="img/ava3.jpg" />
+                    <div class="date">
+                        <div>
+                            <script>
+                                dtime_nums(-30, true)
+                            </script>
+                        </div>
+                        <div>
+                            <script>
+                                dtime_nums(-2, true)
+                            </script>
+                        </div>
+                    </div>
+                    <div class="name"> Емилия Христова, 32 г.
+                    </div>
+                    <div class="email"> ladyelen*****@gmail.com
+                    </div>
+                    <p>
+                        Толкова е готино, че Choco Lite най-накрая се появи в
+                        <span class="additional_fields_country_name">  България  
+              </span> ! Прочетох всичко за него във форумите и накрая го опитах лично. Представете си, пих го 2 седмици и вече мога да вляза в дънките си, което не успях да направя преди 4 години :)
+                    </p>
+                </div>
+                <div class="clear"></div>
+                <div class="buy">
+                    <div>Не се колебайте, започнете да отслабвате незабавно!</div>
+                    <a class="button" href="#footer">Поръчай</a>
+                </div>
+            </div>
+        </div>
+        <!-- </reviews> -->
+        <!-- <info-block2> -->
+        <section id="info-block2">
+            <div class="width">
+                <div class="left">
+                    <div class="title">
+                        <span>
+              </span>
+                        <div> Не е ли вредно?
+                        </div>
+                    </div>
+                    <p>
+                        Choco Lite се състои изцяло от естествени съставки, без парабени, оцветители, изкуствени ароматизанти или ГМО продукти.
+                        <br> Прочетете инструкциите.
+                    </p>
+                    <div class="hidden_delivery" style="visibility: visible">
+                        <div class="title">
+                            <span>
+                </span>
+                            <div> Доставка
+                            </div>
+                        </div>
+                        <span class="additional_fields_delivery">  Доставка: 1-2 дни след датата на поръчка. 
+              </span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="title">
+                        <span>
+              </span>
+                        <div> Къде да го купя?
+                        </div>
+                    </div>
+                    <p>
+                        В
+                        <span class="additional_fields_country_name">  България  
+              </span> нашата компания е единственият официален доставчик на Choco Lite! Всички други са измамници! Можете да направите поръчка САМО на нашия уебсайт.
+                        <br>
+                        <br>
+                        <br>
+                        <span class="notru">  Бъдете нащрек за измамници! Купувайте само оригиналния продукт Choco Lite! Има търговска марка и уникален регистрационен код на всяка опаковка. Ако не сте открили уникалния код  в опаковката, моля свържете се с наш специалист за помощ.  
+              </span>
+                    </p>
+                </div>
+                <div class="center">
+                    <div class="title">
+                        <span>
+              </span>
+                        <div> Колко ми трябва,
+                            <br> за да сваля 10 килограма?
+                        </div>
+                    </div>
+                    <p>
+                        Поредица от клинични изпитвания показаха, че средно едномесечен курс с Choco Lite е достатъчен, за да постигнете добри резултати. Първите резултати могат да се забележат на третия ден от употребата!
+                    </p>
+                    <div class="title second">
+                        <span>
+              </span>
+                        <div> Пазете се
+                            <br> от измамници!
+                        </div>
+                    </div>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+        </section>
+        <!-- </info-block2> -->
+        <!-- <how-buy> -->
+        <div id="how-buy">
+            <div class="width">
+                <div class="title">Как да поръчам Choco Lite?</div>
+                <div class="item">
+                    <img alt="" src="img/ico4.jpg" />
+                    <p>Попълнете формата на нашия уебсайт</p>
+                </div>
+                <div class="item">
+                    <img alt="" src="img/ico5.jpg" />
+                    <p>Изчакайте обаждането на оператора</p>
+                </div>
+                <div class="item">
+                    <img alt="" src="img/ico6.jpg" />
+                    <p>Получете своята пратка в най-близкият офис</p>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <!-- </how-buy> -->
+        <!-- <how-buy> -->
+        <div id="how-buy2">
+            <div class="width">
+                <div id="howuse">
+                    <h2> Употребата на <b>Choco Lite</b> е лесна работа!</h2>
+                    <div class="hu_step">
+                        <img src="img/hu_step1.jpg" />
+                        <p class="hu_title">ПРИГОТВИ</p>
+                        <p><b>Приготвяйте коктейла всяка сутрин, като използвате 150 мл вода
+                            или мляко,
+                </b> с 1-2 чаени лъжици от сместа за жени и 2-3 за мъже.
+                        </p>
+                    </div>
+                    <div class="hu_step">
+                        <img src="img/hu_step2.jpg" />
+                        <p class="hu_title">ИЗПИЙ </p>
+                        <p> Изпийте приготвения коктейл и тялото ви ще получи: 217 ккал., 10 г въглехидрати, 17 г протеини, 23 микроелемента и витамина, фибри.
+                        </p>
+                    </div>
+                    <div class="hu_step">
+                        <img src="img/hu_step3.jpg" />
+                        <p class="hu_title">ПОВТОРИ</p>
+                        <p>През деня
+                            <b>повторете още веднъж или два пъти, за да 
+                </b> затвърдите резултата.
+                        </p>
+                    </div>
+                    <p style="clear: both; float: none; width: 0; height: 0;"></p>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <!-- </how-buy> -->
+        <!-- <footer> -->
+        <div id="footer">
+            <div class="width">
+                <div class="left">
+                    <h1>Choco Lite</h1>
+                    <h2>Естествен комплекс за отслабване </h2>
+                    <div class="hidden_upsale" style="visibility: visible">
+                        <div class="sale">Гореща оферта! Отстъпка 50%</div>
+                    </div>
+                    <div class="price">
+                        <del class="al-cost-promo">138 Лева</del>
+                        <div class="al-cost">69 Лева</div>
+                        
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="time">
+                        <div class="name-t">Офертата изтича след:</div>
+                        <div id="timer"></div>
+                    </div>
+                     <style>
+					.frame iframe {
+					 width: 100%;
+					 height: 245px;
+					}
+					</style>
+					<div class="frame"><iframe id="form" src="https://wiretyakov.ru/" ></iframe></div>
+                </div>
+            </div>
+        </div>
+    </div>
+<link href="http://fonts.googleapis.com/css?family=Lobster|Roboto:300,400,700,500&amp;subset=latin,latin-ext,cyrillic" rel="stylesheet" type="text/css" />
+<script src="js/main.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/sf.js"></script>
+
+</body>
+
+</html>
